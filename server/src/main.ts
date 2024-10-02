@@ -4,8 +4,6 @@ import cors from "cors";
 const app: Express = express();
 const PORT = process.env.PORT || 3000;
 
-app.use("/api", apiRouter);
-
 app.use(
   cors({
     origin: process.env.origin || "http://localhost:5173",
@@ -14,6 +12,9 @@ app.use(
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+//catch all to send endpoints to the API router
+app.use("/api", apiRouter);
 
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   console.error(err);
