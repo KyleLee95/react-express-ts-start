@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@types/body-parser':
+        specifier: ^1.19.5
+        version: 1.19.5
       body-parser:
         specifier: ^1.20.3
         version: 1.20.3
