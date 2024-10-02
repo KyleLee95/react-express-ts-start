@@ -1,0 +1,26 @@
+{
+	"name": "res-sniper-server",
+	"version": "1.0.0",
+	"description": "res-sniper-server",
+	"license": "MIT",
+	"bin": "src/index.ts",
+	"scripts": {
+		"start": "node dist/index.js",
+		"dev": "nodemon --watch 'src/**/*' --exec 'ts-node' src/index.ts",
+		"build": "tsc"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.17",
+		"@types/express": "^5.0.0",
+		"@types/node": "^22.7.4",
+		"express": "^4.21.0",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.6.2"
+	},
+	"dependencies": {
+		"bullmq": "^5.14.0",
+		"cors": "^2.8.5",
+		"ioredis": "^5.4.1",
+		"nodemon": "^3.1.7"
+	}
+}
