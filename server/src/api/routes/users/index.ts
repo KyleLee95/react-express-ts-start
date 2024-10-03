@@ -7,7 +7,7 @@ router.get("/", async (req: Request, res: Response, next: NextFunction) => {
   try {
     const payload = { message: "hello world!" };
     res.json(payload);
-  } catch (err: any) {
+  } catch (err: unknown) {
     next(err);
   }
 });
@@ -18,7 +18,7 @@ router.post(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       res.json({ message: "User created" });
-    } catch (err) {
+    } catch (err: unknown) {
       next(err);
     }
   },

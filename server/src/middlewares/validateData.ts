@@ -14,6 +14,7 @@ export function validateData<T>(schema: ZodSchema<T>) {
           path: err.path.join("."),
           message: err.message,
         }));
+        res.status(400).json({ errors });
         return;
       }
       // Pass unexpected errors to the default error handler
