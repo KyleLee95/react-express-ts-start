@@ -1,6 +1,7 @@
 import { Router, Request, Response, NextFunction } from "express";
 import { validateData } from "src/middlewares/validateData";
-import { userCreateSchema } from "./userSchemas";
+import { userCreateSchema } from "./schemas/userSchemas";
+import prisma from "src/prisma/prisma-client";
 export const router = Router();
 
 router.get("/", async (req: Request, res: Response, next: NextFunction) => {

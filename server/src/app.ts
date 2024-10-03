@@ -1,6 +1,6 @@
 import express, { Express, Request, Response, NextFunction } from "express";
 import cors from "cors";
-import { router as apiRouter } from "./api";
+import { router as apiRouter } from "./routes";
 import { errorHandler, notFoundError } from "./middlewares/errorHandlers";
 import morgan from "morgan";
 import helmet from "helmet";
